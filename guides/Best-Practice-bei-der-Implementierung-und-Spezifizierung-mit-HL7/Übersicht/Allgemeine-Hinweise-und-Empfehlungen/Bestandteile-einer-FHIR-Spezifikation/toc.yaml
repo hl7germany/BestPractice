@@ -1,0 +1,14 @@
+- name: Index
+  filename: Index.page.md
+- name: ImplementationGuide
+  filename: ImplementationGuide.page.md
+- name: Package
+  filename: Package.page.md
+- name: Profile
+  filename: Profile.page.md
+- name: Extensions
+  filename: Extensions.page.md
+- name: CapabilityStatement
+  filename: CapabilityStatement.page.md
+- name: Beispieldaten
+  filename: Beispieldaten.page.md

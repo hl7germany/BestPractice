@@ -1,0 +1,463 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ISiKDokumentenMetadaten" />
+  <url value="https://gematik.de/fhir/isik/v3/Dokumentenaustausch/StructureDefinition/ISiKDokumentenMetadaten" />
+  <version value="3.0.0" />
+  <name value="ISiKDokumentenMetadaten" />
+  <title value="Erforderliche Metadaten für Dokumentenaustausch in ISiK" />
+  <status value="active" />
+  <publisher value="gematik GmbH" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="fhircomposition" />
+    <uri value="http://hl7.org/fhir/composition" />
+    <name value="FHIR Composition" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="xds" />
+    <uri value="http://ihe.net/xds" />
+    <name value="XDS metadata equivalent" />
+  </mapping>
+  <mapping>
+    <identity value="CompositionDocumentReferenceMapping" />
+    <uri value="http://hl7.org/fhir/StructureDefinition/Composition" />
+    <name value="Metadaten eines strukturieren Dokumentes (Document-Bundle)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference.masterIdentifier">
+      <path value="DocumentReference.masterIdentifier" />
+      <short value="Versionsspezifische OID des Dokumentes" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Bundle.identifier" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.masterIdentifier.system">
+      <path value="DocumentReference.masterIdentifier.system" />
+      <short value="Namensraum des Identifiers" />
+      <comment value="Fix: `urn:ietf:rfc:3986`" />
+      <min value="1" />
+      <patternUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.masterIdentifier.value">
+      <path value="DocumentReference.masterIdentifier.value" />
+      <short value="Wert des Identifiers" />
+      <comment value="OID mit URI-Präfix &amp;quot;urn:oid:&amp;quot;" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.identifier">
+      <path value="DocumentReference.identifier" />
+      <comment value="Abweichend zu MHD V4.0.1 ist die Angabe eines Identifiers in ISiK nicht erforderlich.&#xA;Ein solcher kann bei Bedarf (z.B. zur Weitergabe des Dokumentes per XDS) erzeugt werden.&#xA;&amp;#13;[Konsens der Arbeitsgruppe vom 12.11.2021]&#xA;&#xA;Update für Stufe 3:&#xA;In MHD 4.2.0 wurde die Verpflichtung zur Angabe eines Identifiers gelockert, das ISiK-Profil ist damit in diesem Punkt wieder kompatibel zu IHE MHD." />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.identifier" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.status">
+      <path value="DocumentReference.status" />
+      <short value="Status des Dokumentenmetadatensatzes" />
+      <comment value="Der Status des Dokumentes wird in DocumentReference.docStatus gesetzt!" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="=current" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.docStatus">
+      <path value="DocumentReference.docStatus" />
+      <short value="Bearbeitungsstatus des Dokumentes" />
+      <comment value="Abweichend zu MHD V4.0.1 ist die Verwendung von docStatus im ISiK-Kontext erlaubt. Doe Verwendung von docStatus bleibt jedoch optional,&#xA;  da nicht alle Dokumentenerzeugende Systeme einen expliziten Freigabe-Workflow haben. Dokumentenserver müssen jedoch in der Lage sein, den Dokumentenstatus&#xA; (sofern vorhanden) zu persistieren, anzuzeigen und zu reproduzieren.&#xA;  &amp;#13;[Konsens der Arbeitsgruppe vom 10.12.2021]" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.status" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.type">
+      <path value="DocumentReference.type" />
+      <short value="Dokumententyp" />
+      <comment value="Im ISiK-Kontext ist die Typisierung eines Dokumentes mit Hilfe eines KDL-Codes *und* des IHE-XDS-Type-Codes erforderlich und ein Server MUSS beide Kodierungen bereitstellen - trotz der Kardinalität DocumentReference.type.coding:XDS 0..1 -, jedoch ist der IHE-XDS-Type-Code bei Übermittlung für Clients nicht verpflichtend (s.u. zu XDS).&#xA;  Während KDL-Codes eine feingranulare Dokumentenklassifikation für die gezielte Suche nach medizinischen und Administrativen Dokumenten ermöglichen,&#xA;  sind IHE-XDS-Type-Codes für den einrichtungsübergreifenden Dokumentenaustausch maßgeblich.&#xA;  Der XDS-Type-Code kann mit Hilfe der bereitgestellten [ConceptMaps](https://simplifier.net/kdl/~resources?category=ConceptMap)&#xA;  aus dem KDL-Code ermittelt werden. Weitere Typisierungen (z.B. nach SNOMED oder LOINC) sind uneingeschränkt erlaubt.&#xA;&#xA;  [Konsens der Arbeitgruppe vom 18.02.2022]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding">
+      <path value="DocumentReference.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.type.coding:KDL">
+      <path value="DocumentReference.type.coding" />
+      <sliceName value="KDL" />
+      <short value="Dokumenttyp gem. KDL-Terminologie" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dvmd.de/fhir/ValueSet/kdl" />
+      </binding>
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.type.coding[KDL]" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.type.coding:KDL.system">
+      <path value="DocumentReference.type.coding.system" />
+      <short value="Kodiersystem" />
+      <comment value="Fix: &amp;quot;http://dvmd.de/fhir/CodeSystem/kdl&amp;quot;" />
+      <min value="1" />
+      <patternUri value="http://dvmd.de/fhir/CodeSystem/kdl" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:KDL.code">
+      <path value="DocumentReference.type.coding.code" />
+      <short value="Code" />
+      <comment value="Der KDL-Code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:KDL.display">
+      <path value="DocumentReference.type.coding.display" />
+      <short value="Anzeigetext" />
+      <comment value="Der Anzeigetext zum KDL-Code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:XDS">
+      <path value="DocumentReference.type.coding" />
+      <sliceName value="XDS" />
+      <short value="Dokumenttyp gem. IHE-De-Terminologie" />
+      <comment value="Die Übermittlung des XDS-Type-Codes ist im Rahmen der Dokumentenbereitstellung für Clients nicht verpflichtend,&#xA;  MUSS jedoch vom Server bei der Entgegennahme ggf. ergänzt und bei der Dokumentenabfrage zurückgegeben werden. Der XDS-Type-Code kann über die im Rahmen der [KDL-Spezifikation](https://simplifier.net/kdl) publizierten&#xA;  [ConceptMaps](https://simplifier.net/kdl/~resources?category=ConceptMap) aus dem KDL-Code ermittelt werden" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDStypeCode" />
+      </binding>
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.type.coding[XDS]" />
+        <comment value="Kann mittels Lookup in den KDL-&gt;XDS ConceptMaps anhand des KDL-Type-Codes ermittelt werden" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.category">
+      <path value="DocumentReference.category" />
+      <short value="Dokumentklasse/-Kategorie" />
+      <comment value="Die Kategorisierung von Dokumenten erfolgt mittels der von IHE Deutschland publizierten XDS-Class-Codes.&#xA;  Die übermittlung des XDS-Class-Codes ist im Rahmen der Dokumentenbereitstellung für Clients nicht verpflichtend,&#xA;  muss jedoch vom Server bei der Entgegennahme ggf. ergänzt und bei der Dokumentenabfrage zurückgegeben werden.&#xA;  Der XDS-Class-Code kann mit Hilfe der bereitgestellten [ConceptMap](https://simplifier.net/kdl/~resources?category=ConceptMap)&#xA;  aus dem KDL-Code ermittelt werden." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding">
+      <path value="DocumentReference.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.category.coding:XDS">
+      <path value="DocumentReference.category.coding" />
+      <sliceName value="XDS" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDSclassCode" />
+      </binding>
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.category.coding[XDS]" />
+        <comment value="Kann mittels Lookup in den KDL-&gt;XDS ConceptMaps anhand des KDL-Type-Codes ermittelt werden" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.category.coding:XDS.system">
+      <path value="DocumentReference.category.coding.system" />
+      <short value="Kodiersystem" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:XDS.code">
+      <path value="DocumentReference.category.coding.code" />
+      <short value="Code" />
+      <comment value="Der XDS-Class-Code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:XDS.display">
+      <path value="DocumentReference.category.coding.display" />
+      <short value="Anzeigetext" />
+      <comment value="Der Anzeigetext zum XDS-Class-Code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.subject">
+      <path value="DocumentReference.subject" />
+      <short value="Patientenbezug des Dokumentes" />
+      <comment value="Siehe Beschreibung in der [FHIR Kernspezifikation](http://hl7.org/fhir/documentreference-definitions.html#DocumentReference.subject)" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Lookup Composition.subject.resolve().identifier[PID]" />
+        <comment value="Ermittlung des korrekten Patienten auf dem Server anhand des Identifiers (PID) und/oder weiterer Kriterien erforderlich" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.subject.reference">
+      <path value="DocumentReference.subject.reference" />
+      <short value="Absolute oder relative URL des Patienten auf dem Server" />
+      <comment value="Absolute oder relative URL des Patienten auf dem Server" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.date">
+      <path value="DocumentReference.date" />
+      <comment value="Abweichend zu MHD V4.0.1 ist die Verwendung von date im ISiK-Kontext nicht verpflichtend.&#xA;Die Motivation für die verbindliche Verwendung von `date` seitens IHE ist nicht nachvollziehbar.&#xA;Ein entsprechender Change Request zur Harmonisierung wurde eingereicht. Das Dokumentendatum wird in attachment.creation gesetzt.&#xA;&#xA;Update für Stufe 3:&#xA;In MHD 4.2.0 wurde die Verpflichtung zur Angabe von date gelockert, das ISiK-Profil ist damit in diesem Punkt wieder kompatibel zu IHE MHD." />
+    </element>
+    <element id="DocumentReference.author">
+      <path value="DocumentReference.author" />
+      <short value="Autor des Dokumentes" />
+      <comment value="In dieser Ausbaustufe ist die Nennung des Namens oder Kürzels des Autors ausreichend.&#xA;  Eine darüber hinaus gehende Verlinkung auf einen Pracitioner (auflösbar auf dem Server) ist möglich aber nicht erforderlich." />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.author" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.author.display">
+      <path value="DocumentReference.author.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.custodian">
+      <path value="DocumentReference.custodian" />
+      <comment value="Einschränkung der Kardinalität analog MHD V4.0.1" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.relatesTo">
+      <path value="DocumentReference.relatesTo" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.relatesTo.code">
+      <path value="DocumentReference.relatesTo.code" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.relatesTo.code" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.relatesTo.target">
+      <path value="DocumentReference.relatesTo.target" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Lookup Composition.relatesTo.targetReference.resolve().identifier" />
+        <comment value="Ermittlung der zu ersetzenden DocumentReference anhand des identifiers der referenzierten Composition erforderlich" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.description">
+      <path value="DocumentReference.description" />
+      <comment value="Genaue menschenlesbare Beschreibung des Dokumentes, z.B. &amp;quot;Lungenfunktionstest vom 18.02.2022&amp;quot;" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.title" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.securityLabel">
+      <path value="DocumentReference.securityLabel" />
+      <short value="Vertraulichkeit" />
+      <comment value="Die Bereitstellung des Vertraulichkeitsinformation durch den Ersteller des Dokumentes ist verpflichtend.&#xA;Ebenso sind Dokumentenserver verpflichtet, diese Information zu persistieren und bei der Dokumentenabfrage zu reproduzieren.&#xA;Die ISiK-Spezifikation trifft jedoch keine Annahmen darüber, wie sich einzelne Vertraulichkeitsstufen auf die Zugriffsberechtigungen&#xA;verschiedener benutzer auf ein Dokument auswirken. Im ISiK-Kontext ist die Angabe einer der drei Vertraulichkeitsstufen&#xA;N | R | V verpflichtend, jedoch ohne Einschränkung der Verwendung zusätzlicher Vertraulichkeits-Flags.&#xA;&amp;#13;&#xA;&#xA;[Konsens der Arbeitsgruppe vom 12.11.2021]" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://gematik.de/fhir/isik/v3/Dokumentenaustausch/ValueSet/ISiKConfidentialityCodes" />
+      </binding>
+    </element>
+    <element id="DocumentReference.content">
+      <path value="DocumentReference.content" />
+      <short value="Beschreibung des Dokumenteninhaltes" />
+      <comment value="Die Kardinalität wurde angepasst, um den Vorgaben von IHE MHD zu ensprechen [Änderung im Zuge der Kommentierung Stufe 3]." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment">
+      <path value="DocumentReference.content.attachment" />
+      <short value="Anhang" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <short value="Mimetype des Dokumentes" />
+      <comment value="Mimetype (Dateityp) des Dokumentes (z.B. &amp;quot;application/pdf&amp;quot;)" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="`application/html` für den extrahierten Narrative, `application/fhir+xml` oder `application/fhir+json` für das Bundle" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.content.attachment.language">
+      <path value="DocumentReference.content.attachment.language" />
+      <short value="Sprache, in der das Dokument verfasst wurde." />
+      <comment value="Kann bei Systemen, die keine Mehrsprachigkeit unterstützen,&#xA;      fest auf &amp;quot;de&amp;quot; oder &amp;quot;de-DE&amp;quot; gesetzt werden." />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="=de sofern keine abweichende Angabe in Composition.language" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.content.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <short value="Base64-codierte Binärdaten" />
+      <comment value="Um die Suche nach Dokumenten effizient zu gestalten, dürfen die Dokumente selbst nicht in die DocumentReference eingebettet werden, &#xA;      sondern müssen als separates Datenobjekt referenziert werden. &#xA;      &#xA;Update für Stufe 3:&#xA;Die Ausnahme bildet die Interaktion &amp;quot;Dokumentenbereitstellung&amp;quot;, &#xA;bei der die Binärdaten des Dokumentes eingebettet in die DocumentReference an den Server übermittelt und dort dann in eine separate &#xA;Ressource ausgelagert und über Attachment.url referenziert werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <short value="Referenz auf Dokument" />
+      <comment value="Um die Suche nach Dokumenten effizient zu gestalten, dürfen die Dokumente selbst nicht in die DocumentReference eingebettet werden, &#xA;      sondern müssen als separates Datenobjekt referenziert werden. &#xA;      &#xA;Update für Stufe 3:&#xA;Die Ausnahme bildet die Interaktion &amp;quot;Dokumentenbereitstellung&amp;quot;, &#xA;bei der die Binärdaten des Dokumentes eingebettet in die DocumentReference an den Server übermittelt und dort dann in eine separate &#xA;Ressource ausgelagert und über Attachment.url referenziert werden." />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="vom Server festgelegter Speicherort des Bundles/Narratives" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.content.attachment.creation">
+      <path value="DocumentReference.content.attachment.creation" />
+      <short value="Dokumentendatum" />
+      <comment value="Es obliegt dem erzeugenden System, zu entscheiden,&#xA;      welches Datum als Dokumentendatum geeignet ist, z.B. Datum der Erstellung oder Datum der letzten Änderung" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Composition.date" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.content.format">
+      <path value="DocumentReference.content.format" />
+      <short value="Format des Dokumentes" />
+      <comment value="Sofern das Dokument nicht auf einem standardisierten,&#xA;    strukturierten Austauschformat (z.B. CDA) basiert, für dessen Interpretation ein konkretes Schema herangezogen werden muss,&#xA;    genügt die Angabe des Codes&#xA;    &amp;quot;urn:ihe:iti:xds:2017:mimeTypeSufficient&amp;quot;" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDSformatCodeDE" />
+      </binding>
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="=urn:ihe:iti:xds:2017:mimeTypeSufficient" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.context">
+      <path value="DocumentReference.context" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.context.encounter">
+      <path value="DocumentReference.context.encounter" />
+      <comment value="Abweichend zu MHD V4.0.1 ist die Verwendung der Encounter-Referenz im ISiK-Kontext erlaubt.&#xA;Update für Stufe 3: &#xA;In MHD 4.2.0 wurde das Verbot der Angabe einer Encounter-Referenz gelockert, das ISiK-Profil ist damit in diesem Punkt wieder kompatibel zu IHE MHD." />
+      <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="Lookup Composition.encounter.resolve().identifier" />
+        <comment value="Ermittlung des korrekten Encounters auf dem Server anhand des Identifiers(Fallnummer) und/oder weiterer Kriterien erforderlich" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.context.event">
+      <path value="DocumentReference.context.event" />
+      <comment value="Binding auf IHE-DE Terminologie hinzugefügt" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDSeventCodeList" />
+      </binding>
+    </element>
+    <element id="DocumentReference.context.event.coding">
+      <path value="DocumentReference.context.event.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DocumentReference.context.event.coding.system">
+      <path value="DocumentReference.context.event.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.context.event.coding.code">
+      <path value="DocumentReference.context.event.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.context.facilityType">
+      <path value="DocumentReference.context.facilityType" />
+      <short value="Art der Einrichtung, aus der das Dokument stammt" />
+      <comment value="Kann, sofern keine abweichende Information bekannt ist auf &amp;quot;KHS&amp;quot; gesetzt werden." />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode" />
+      </binding>
+      <mapping>
+        <identity value="CompositionDocumentReferenceMapping" />
+        <map value="=KHS, sofern nichts anderes bekannt" />
+      </mapping>
+    </element>
+    <element id="DocumentReference.context.practiceSetting">
+      <path value="DocumentReference.context.practiceSetting" />
+      <comment value="Binding auf IHE-DE Terminologie hinzugefügt" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

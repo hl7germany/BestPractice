@@ -1,0 +1,12 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="MeinValueSet" />
+  <url value="http://example.org/ValueSet/MeinValueSet" />
+  <name value="MeinValueSet" />
+  <status value="active" />
+  <description value="ValueSet für IG Template" />
+  <compose>
+    <include>
+      <system value="http://example.org/CodeSystem/MeinCodeSystem" />
+    </include>
+  </compose>
+</ValueSet>

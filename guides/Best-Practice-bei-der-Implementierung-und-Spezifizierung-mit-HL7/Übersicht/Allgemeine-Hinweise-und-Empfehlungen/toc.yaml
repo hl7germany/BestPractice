@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Kontakt zur Community
+  filename: Kontakt-zur-Community.page.md
+- name: Wahl der FHIR-Version
+  filename: Wahl-der-FHIR-Version
+- name: Bestandteile einer FHIR-Spezifikation
+  filename: Bestandteile-einer-FHIR-Spezifikation

@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Unterschiede zwischen R4 und R5
+  filename: Unterschiede-zwischen-R4-und-R5.page.md
+- name: Nutzung von FHIR-Versionen in Deutschland
+  filename: Nutzung-von-FHIR-Versionen-in-Deutschland.page.md
+- name: Fazit und Handlungsempfehlung
+  filename: Fazit-und-Handlungsempfehlung.page.md

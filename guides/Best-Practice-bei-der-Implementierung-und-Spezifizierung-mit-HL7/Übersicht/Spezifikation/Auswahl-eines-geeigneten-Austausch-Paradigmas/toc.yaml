@@ -1,0 +1,16 @@
+- name: Index
+  filename: Index.page.md
+- name: 'Client-Server-Kommunikation '
+  filename: Client-Server-Kommunikation.page.md
+- name: 'Mensch-Mensch-Kommunikation '
+  filename: Mensch-Mensch-Kommunikation.page.md
+- name: 'Maschine-Maschine-Kommunikation '
+  filename: Maschine-Maschine-Kommunikation.page.md
+- name: 'Mensch-Maschine-Kommunikation '
+  filename: Mensch-Maschine-Kommunikation.page.md
+- name: Massendatentransfer
+  filename: Massendatentransfer.page.md
+- name: Primärsystem-App-Integration
+  filename: Primärsystem-App-Integration.page.md
+- name: Entscheidungsunterstützung
+  filename: Entscheidungsunterstützung.page.md

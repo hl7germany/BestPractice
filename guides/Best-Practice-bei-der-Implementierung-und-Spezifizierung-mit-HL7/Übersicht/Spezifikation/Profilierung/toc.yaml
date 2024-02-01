@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.page.md
+- name: Umgang mit Kardinalitäten
+  filename: Umgang-mit-Kardinalitäten.page.md
+- name: Umgang mit Modifying Elements
+  filename: Umgang-mit-Modifying-Elements.page.md
+- name: Umgang mit Meta-Daten
+  filename: Umgang-mit-Meta-Daten.page.md
+- name: Dokumentation und Nachvollziehbarkeit
+  filename: Dokumentation-und-Nachvollziehbarkeit.page.md
+- name: Weitere Empfehlungen
+  filename: Weitere-Empfehlungen.page.md

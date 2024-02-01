@@ -1,0 +1,7 @@
+<Patient xmlns="http://hl7.org/fhir">
+  <name>
+    <family value="Mustermann" />
+    <given value="Max" />
+  </name>
+  <gender value="male" />
+</Patient>

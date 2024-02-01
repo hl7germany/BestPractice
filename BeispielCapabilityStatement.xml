@@ -1,0 +1,84 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="BeispielCapabilityStatement" />
+  <url value="http://example.org/CapabilityStatement/BeispielCapabilityStatement" />
+  <name value="BeispielCapabilityStatement" />
+  <title value="Beispiel CapabilityStatement für IG Template" />
+  <status value="active" />
+  <experimental value="false" />
+  <description value="Das vorliegende CapabilityStatement dient als Beispiel für das IG Template" />
+  <kind value="requirements" />
+  <fhirVersion value="4.0.1" />
+  <format value="application/fhir+xml" />
+  <format value="application/fhir+json" />
+  <implementationGuide value="https://gematik.de/fhir/isik/v3/Dokumentenaustausch/ImplementationGuide|3.0.0" />
+  <rest>
+    <mode value="server" />
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <type value="Patient" />
+      <supportedProfile value="https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKPatient" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="read" />
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="search-type" />
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="_id" />
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="identifier" />
+        <definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="family" />
+        <definition value="http://hl7.org/fhir/SearchParameter/individual-family" />
+        <type value="string" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="given" />
+        <definition value="http://hl7.org/fhir/SearchParameter/individual-given" />
+        <type value="string" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="birthdate" />
+        <definition value="hhttp://hl7.org/fhir/SearchParameter/individual-birthdate" />
+        <type value="date" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="gender" />
+        <definition value="hhttp://hl7.org/fhir/SearchParameter/individual-gender" />
+        <type value="token" />
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

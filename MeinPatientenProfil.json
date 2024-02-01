@@ -1,0 +1,145 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MeinPatientProfil",
+  "url": "http://example.org/StructureDefinition/MeinPatientProfil",
+  "name": "MeinPatientProfil",
+  "title": "Mein Patienten-Profil",
+  "description": "Beispielprofil für IG Template. Mit noch mehr Text zu Testzwecken: Hier ist ein [link](http://gefyra.de), und eine \n  # Überschrift \n  sowie \n  * eine \n  * Aufzählung ",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "loinc",
+      "uri": "http://loinc.org",
+      "name": "LOINC code for the element"
+    },
+    {
+      "identity": "meinErstesPatientenMapping",
+      "uri": "Meine Datenbank",
+      "comment": "Mapping der Patientenressource auf meine Datenbank"
+    },
+    {
+      "identity": "meinZweitesPatientenMapping",
+      "uri": "Meine andere Datenbank",
+      "comment": "Mapping der Patientenressource auf meine andere Datenbank"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "short": "Name",
+        "comment": "Der Name muss angegeben werden, um die Identität des Patienten verifizieren zu können",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name.family",
+        "path": "Patient.name.family",
+        "short": "Nachnname",
+        "comment": "Der Nachname des Patienten mit allen Bestandteilen (Vorsatzwort, Namenszusatz, Postfix etc.) muss stets asl ein *vollständiger* [String](http://hl7.org/fhir/datatypes.html#string) angegeben werden. **MARKDOWN-TEST!!!**",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "nachname-check",
+            "severity": "warning",
+            "human": "Der Nachname sollte nicht länger sein als 50 Zeichen!",
+            "expression": "length() < 50",
+            "source": "http://example.org/StructureDefinition/MeinPatientProfil"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "meinErstesPatientenMapping",
+            "map": "Person.Nachname"
+          },
+          {
+            "identity": "meinZweitesPatientenMapping",
+            "map": "Person.Nachname"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name.given",
+        "path": "Patient.name.given",
+        "short": "Vorname",
+        "comment": "Der Vorname des Patienten muss stets angegeben werden. Sollte der Vorname in Ausnahmefällen nicht bekannt sein, kann die data-absent-reason-Extension verwendet werden",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "meinErstesPatientenMapping",
+            "map": "Person.Vorname",
+            "comment": "Meine DB kann nur einen Vornamen speichern"
+          },
+          {
+            "identity": "meinZweitesPatientenMapping",
+            "map": "Person.Vorname",
+            "comment": "Meine DB kann nur einen Vornamen speichern"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name.prefix",
+        "path": "Patient.name.prefix",
+        "short": "Titel",
+        "comment": "Die Angabe eines Titels ist optional, muss jedoch übermittelt werden, sofern bekannt.",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "meinErstesPatientenMapping",
+            "map": "Person.Titel",
+            "comment": "In meiner DB ist nur Dr. oder Prof. erlaubt!"
+          },
+          {
+            "identity": "meinZweitesPatientenMapping",
+            "map": "Person.Titel",
+            "comment": "In meiner DB ist nur Dr. oder Prof. erlaubt!"
+          }
+        ]
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "mapping": [
+          {
+            "identity": "meinErstesPatientenMapping",
+            "map": "Person.Geburtsdatum",
+            "comment": "muss in das Format DD.MM.YYYY konvertiert werden"
+          },
+          {
+            "identity": "meinZweitesPatientenMapping",
+            "map": "Person.Geburtsdatum",
+            "comment": "muss in das Format DD.MM.YYYY konvertiert werden"
+          }
+        ]
+      }
+    ]
+  }
+}

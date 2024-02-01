@@ -1,0 +1,18 @@
+- name: Index
+  filename: Index.page.md
+- name: Konzeption und Durchführung von Spezifikations-Projekten
+  filename: Konzeption-und-Durchführung-von-Spezifikations-Projekten.page.md
+- name: Profilierung
+  filename: Profilierung
+- name: Auswahl eines geeigneten Austausch-Paradigmas
+  filename: Auswahl-eines-geeigneten-Austausch-Paradigmas
+- name: Benennung und Versionierung von Artefakten
+  filename: Benennung-und-Versionierung-von-Artefakten.page.md
+- name: Verwendung von Extensions
+  filename: Verwendung-von-Extensions.page.md
+- name: Erstellung eines CapabilityStatements
+  filename: Erstellung-eines-CapabilityStatements.page.md
+- name: Erstellung von Beispieldaten
+  filename: Erstellung-von-Beispieldaten.page.md
+- name: Erstellung eines Implementierungsleitfadens
+  filename: Erstellung-eines-Implementierungsleitfadens.page.md

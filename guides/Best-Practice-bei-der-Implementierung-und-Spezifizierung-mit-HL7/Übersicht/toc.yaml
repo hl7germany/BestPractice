@@ -1,0 +1,16 @@
+- name: Index
+  filename: Index.page.md
+- name: Release Notes
+  filename: Release-Notes.page.md
+- name: Inhaltsverzeichnis
+  filename: Inhaltsverzeichnis.page.md
+- name: Über diesen Leitfaden
+  filename: Über-diesen-Leitfaden
+- name: Allgemeine Hinweise und Empfehlungen
+  filename: Allgemeine-Hinweise-und-Empfehlungen
+- name: Implementierung
+  filename: Implementierung
+- name: Spezifikation
+  filename: Spezifikation
+- name: Terminologien
+  filename: Terminologien

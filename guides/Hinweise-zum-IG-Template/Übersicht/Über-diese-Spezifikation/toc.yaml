@@ -1,0 +1,6 @@
+- name: Index
+  filename: Index.page.md
+- name: Zweckbestimmung
+  filename: Zweckbestimmung.page.md
+- name: Anwendung
+  filename: Anwendung.page.md

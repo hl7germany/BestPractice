@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Nutzung von Leitfäden
+  filename: Nutzung-von-Leitfäden.page.md
+- name: Wiederverwendung von Code
+  filename: Wiederverwendung-von-Code.page.md
+- name: Sicherheit
+  filename: Sicherheit.page.md
