@@ -7,11 +7,8 @@ topic: Meta
 <img src="https://hl7.de/wp-content/uploads/Logo_HL7_DE.svg" alt="logo" width="200" align="right" style="margin:20px 20px"/>
 
 <a href="https://simplifier.net/best-practice" class="btn btn-primary">zum Projekt auf Simplifier</a>
+<a href="https://github.com/hl7germany/BestPractice" class="btn btn-primary">zum Projekt auf GitHub</a>
 
-[![FHIR_project_on_GitHub](https://img.shields.io/badge/FHIR_project_on_GitHub.com-Best--Practice-green)](https://github.com/hl7germany/basisprofil-de-r4)
-
-<!--[![CI (FHIR Validation)](https://github.com/hl7germany/basisprofil-de-r4/actions/workflows/main.yml/badge.svg)](https://github.com/hl7germany/basisprofil-de-r4/actions/workflows/main.yml)
--->
 
 ### Zusammenfassung
 <!-- Kurzbeschreibung des Projektes -->
@@ -44,6 +41,7 @@ Abstimmungsverfahren: laufend <!-- geplant | laufend | abgeschlossen -->
 eMail-Verteiler für Interessenten, GoogleGroups, Chats, Foren o.ä.  --->
 * Diskussion: [FHIR-Chat](https://chat.fhir.org/#narrow/stream/179183-german-.28d-a-ch.29)
 * Kommentierung: [Jira](https://hl7germany.atlassian.net/jira/software/c/projects/HFBP/issues)
+* PullRequests: [GitHub](https://github.com/hl7germany/BestPractice)
 
 ### Beteiligte Organsiationen
 * HL7 Deutschland e.V.
