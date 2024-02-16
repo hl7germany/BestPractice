@@ -1,6 +1,7 @@
 ## {{page-title}}
 
 ### Version 0.0.4
+* `added` Template für (SDC-)Questionnaires hinzugefügt
 * `changed` [HDB-210](https://hl7germany.atlassian.net/issues/HDB-210) Startseite umbenannt in "Übersicht"
 * `changed` Umstellung auf neue FQL-Syntax (Verfügbar ab Simplifier Version 31.1.1.0) mit Variablen für Canoncials und neuen Output-Optionen. Auslagerung der FQL-Queries, die in Tabs verwendet werden, in Hidden Pages
 

@@ -8,7 +8,7 @@ topic: Meta
 
 <a href="https://simplifier.net/best-practice" class="btn btn-primary">zum Projekt auf Simplifier</a>
 
-<a href="https://github.com/..." class="btn btn-primary">zum Projekt auf GitHub</a>
+<a href="https://github.com/hl7germany/BestPractice" class="btn btn-primary">zum Projekt auf GitHub</a>
 
 ### Zusammenfassung
 <!-- Kurzbeschreibung des Projektes -->
@@ -30,6 +30,7 @@ Abstimmungsverfahren: geplant <!-- geplant | laufend | abgeschlossen -->
 eMail-Verteiler für Interessenten, GoogleGroups, Chats, Foren o.ä.  --->
 * Diskussion: [FHIR-Chat](https://chat.fhir.org/#narrow/stream/179183-german-.28d-a-ch.29)
 * Kommentare, Anregungen, Feature-Requests, Korrekturen: [Jira Helpdesk](https://hl7germany.atlassian.net/jira/software/c/projects/HFBP/issues)
+* PullRequests: [GitHub](https://github.com/hl7germany/BestPractice)
 
 ### Beteiligte Organsiationen
 * [HL7 Deutschland e.V.](https://hl7.de)
