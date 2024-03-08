@@ -27,7 +27,7 @@ Während Structured Documents keine Annahme darüber machen, auf welche Art und 
 Die Spezifikation "Structures Data Capture (SDC)" sorgt für die nahtlose Integration von Formularen in die Systeme sowohl des Senders als auch des Empfängers von Formulardaten.
 
 SDC spezifiziert unter anderem, wie Formularfelder mit maschinenlesbaren Anweisungen für die Quellsysteme annotiert werden können, so dass in den Systemen bereits vorhandene Informationen automatisch vorbelegt werden können.
-Außerderm erlaubt SDC die Annotation mit Anweisungen, wie aus den im Formular erhobenen Daten eigenständige, unabhängig vom Formuarkontext weiterverarbeitbare Ressourcen extrahiert werden können.
+Außerdem erlaubt SDC die Annotation mit Anweisungen, wie aus den im Formular erhobenen Daten eigenständige, unabhängig vom Formuarkontext weiterverarbeitbare Ressourcen extrahiert werden können.
 
 Dieses Paradigma ist vorzuziehen wenn folgende Vorbedingungen ganz oder teilweise gegeben sind:
 * die Struktur des Dokumentes ist fest vorgegeben, nicht nur in Form von Kapiteln sondern bis hin zu einzelnen Elementen der strukturierten Daten. Der Anwender hat wenig bis keinen Gestaltungsfreiraum. Viele Informationen werden codiert und mit begrenzen Wertemengen (Auswahllisten) oder als ja/nein-Informationen erhoben. Freitextangaben sind in ihrem Umfang begrenzt und meist auf eine konkrete Fragestellung bezogen.
