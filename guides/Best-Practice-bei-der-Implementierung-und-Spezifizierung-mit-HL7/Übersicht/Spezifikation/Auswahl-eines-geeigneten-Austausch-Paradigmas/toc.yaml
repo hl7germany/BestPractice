@@ -12,5 +12,7 @@
   filename: Massendatentransfer.page.md
 - name: Primärsystem-App-Integration
   filename: Primärsystem-App-Integration.page.md
-- name: Entscheidungsunterstützung
+- name: Entscheidungsunterstützungssysteme
   filename: Entscheidungsunterstützung.page.md
+- name: Dokumente vs. Formulare
+  filename: Dokumente-vs-Formulare.page.md
