@@ -3,7 +3,7 @@ Die FHIR-Spezifikation ist kein Sicherheitsprotokoll! Sie definiert keine sicher
 Im Kontext der FHIR RESTful API werden jedoch Kommunikationswege definiert, die in Verbindung mit geeigneten Sicherheitsprotokollen genutzt werden müssen, die an anderer Stelle beschrieben werden.
 
 Beispiele für solche Definitionen sind u.A.
-* [ISiK Modul Sicherheit](https://simplifier.net/isik-sicherheit-v2)
+* [ISiK Modul Connect](https://simplifier.net/isik-connect-v4)
 * [SMART App Launch](https://www.hl7.org/fhir/smart-app-launch/index.html)
 * [IHE Internet User Access](https://profiles.ihe.net/ITI/IUA/index.html)
 
