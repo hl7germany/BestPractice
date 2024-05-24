@@ -10,6 +10,8 @@
 
 **Geeignetes Paradigma: Questionnaire / QuestionnaireResponse in Verbindung mit SDC (Structured Data Capture)**
 
+siehe auch {{pagelink:Übersicht/Spezifikation/Auswahl-eines-geeigneten-Austausch-Paradigmas/Dokumente-vs-Formulare.page.md}}
+
 Die Questionnaire-Extensions im [SDC-Implementierungsleitfaden](https://build.fhir.org/ig/HL7/sdc/) ermöglichen es unter anderem:
 * Items zur Extraktion zu annotieren, so dass die über ein Formular erhobenen Daten auch außerhalb des Formularkontextes wiederverwendet und z.B. über die REST-ful API verfügbar gemacht werden können.
 * Items zur automatischen Vorbelegung ("Prepopulation") zu annotieren um Daten, die in den Systemen bereits vorhanden sind, über die REST-ful API zu ermitteln und redundante Datenerfassung zu verhindern.
