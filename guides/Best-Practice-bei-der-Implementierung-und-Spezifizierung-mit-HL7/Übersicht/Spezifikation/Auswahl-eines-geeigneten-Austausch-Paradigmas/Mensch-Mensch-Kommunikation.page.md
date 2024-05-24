@@ -8,6 +8,8 @@
 
 **Geeignetes Paradigma: Documents**
 
+siehe auch {{pagelink:Übersicht/Spezifikation/Auswahl-eines-geeigneten-Austausch-Paradigmas/Dokumente-vs-Formulare.page.md}}
+
 mögliche Protokolle zum Dokumenten-Transfer: 
 * HTTP(s) (Document-Endpoint) 
 * IHE-MHDS
