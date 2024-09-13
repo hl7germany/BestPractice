@@ -2,7 +2,7 @@
 from
 	CodeSystem
 where
-	url = 'http://example.org/CodeSystem/MeinCodeSystem'
+	url = %canonical
 select
 	Beschreibung: description
 </fql>

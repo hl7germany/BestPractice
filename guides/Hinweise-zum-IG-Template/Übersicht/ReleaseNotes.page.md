@@ -1,5 +1,13 @@
 ## {{page-title}}
 
+### 13.9.2024
+* `fixed` FQL Queries auf CapabilityStatement funktionieren nun auch bei multiplen Ressourcentypen
+
+### 19.8.2024
+* `fixed` statische URL in FQL-Statement von ValueSet und CodeSystem auf Canonical-Variable korrigiert
+* `fixed` defekter PageLink im Template für CodeSystem korrigiert
+* `changed` neues Simplifier-Feature (ab Version 2024.5.2) output=transpose für Metadata-Tabellen verwendet.
+
 ### Version 0.0.4
 * `added` Template für (SDC-)Questionnaires hinzugefügt
 * `changed` [HDB-210](https://hl7germany.atlassian.net/issues/HDB-210) Startseite umbenannt in "Übersicht"

@@ -12,14 +12,14 @@ expand: 2
 
 ### Metadaten
 
-@```
+<fql output="transpose" headers="true">
 from
 	OperationDefinition
 where
-	url = 'http://hl7.org/fhir/OperationDefinition/Resource-meta-add'
+	url = %canoncial
 select
 	Canonical: url, Status: status, Version: version
-```
+</fql>
 
 
 
