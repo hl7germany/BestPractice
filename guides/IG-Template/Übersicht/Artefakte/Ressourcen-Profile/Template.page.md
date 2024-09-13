@@ -15,7 +15,7 @@ expand: 1
 
 ### Metadaten
 
-<fql output="table" headers="true">
+<fql output="transpose" headers="true">
 from
 	StructureDefinition
 where

@@ -2,7 +2,7 @@
 from
 	ValueSet
 where
-	url = 'http://example.org/ValueSet/MeinValueSet'
+	url = %canonical
 select
 	Beschreibung: description
 </fql>

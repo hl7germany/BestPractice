@@ -10,7 +10,7 @@ canonical: http://example.org/ValueSet/MeinValueSet
 
 ### Metadaten
 
-<fql output="table">
+<fql output="transpose" headers="true">
 from
 	ValueSet
 where

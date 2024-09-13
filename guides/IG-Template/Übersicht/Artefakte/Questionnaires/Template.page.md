@@ -11,7 +11,7 @@ expand: 2
 
 ### Metadaten
 
-<fql>
+<fql output="transpose" headers="true">
 from
 	Questionnaire
 where

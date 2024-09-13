@@ -9,7 +9,7 @@ canonical: http://example.org/CodeSystem/MeinCodeSystem
 
 ### Metadaten
 
-<fql output="table">
+<fql output="transpose" headers="true">
 from
 	CodeSystem
 where
@@ -36,7 +36,7 @@ select
 ```
     </tab>
     <tab title="Beschreibung">
-    {{page:Startseite/Artefakte/Terminologien/CodeSystems/FQL-Beschreibung.page.md}}
+    {{page:Übersicht/Artefakte/Terminologien/CodeSystems/FQL-Beschreibung.page.md}}
     </tab>
     <tab title="XML">      
         {{xml}}
