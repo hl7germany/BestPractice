@@ -1,5 +1,8 @@
 ## {{page-title}}
 
+### 20.09.2024
+* `changed` Template und FQL-Queries für Rendering von CapabilityStatement vollständig überarbeitet
+
 ### 13.9.2024
 * `fixed` FQL Queries auf CapabilityStatement funktionieren nun auch bei multiplen Ressourcentypen
 
