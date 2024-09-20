@@ -8,40 +8,100 @@ canonical: http://example.org/CapabilityStatement/BeispielCapabilityStatement
 
 ## {{link}}
 
-### Metadaten
-
-<fql output="table">
+<fql output="transpose" headers="true">
 from
 	CapabilityStatement
 where
-	url = 'http://example.org/CapabilityStatement/BeispielCapabilityStatement'
+	url = %canonical
 select
 	CanonicalURL: url, Intention: kind, Status: status, Version: version
 </fql>
 
-### Inhalt
-
-<tabs>
-    <tab title="Darstellung">      
-        {{render}}
-    </tab>
-    <tab title="Beschreibung">
-    @```
+<fql>
 from
 	CapabilityStatement
 where
-	url = 'http://example.org/CapabilityStatement/BeispielCapabilityStatement' 
+	url = %canonical
 select
-	Beschreibung: description
-```
-    </tab>
-    <tab title="XML">      
-        {{xml}}
-    </tab>
-    <tab title="JSON">
-        {{json}}
-    </tab>
-    <tab title="Link">
-        {{link}}
-    </tab>
-</tabs>
+	Beschreibung:description
+</fql>
+{{link}}
+
+
+## Anforderungen an eine serverseitige Implementierungen
+
+### Interaktionen
+<fql>
+from
+    CapabilityStatement
+where
+    url = %canonical
+for rest.resource
+select
+{
+     Ressourcentyp: type,
+     Profile: supportedProfile,
+     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     READ: interaction.where(code = 'read').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     SEARCH: interaction.where(code = 'search-type').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     CREATE: interaction.where(code = 'create').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     UPDATE: interaction.where(code = 'update').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     DELETE: interaction.where(code = 'delete').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
+
+
+}
+order by type
+</fql>
+
+### Suchparameter
+
+<fql>
+from
+    CapabilityStatement
+where
+    url = %canonical
+for rest.resource
+select
+RessourcenTyp: type,
+join searchParam
+{
+     SuchParameter: name,
+     Type: token,
+     Definition: definition,
+     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     Hinweise: documentation
+}
+</fql>
+
+### (Reverse-)Include
+<fql>
+from
+    CapabilityStatement
+where
+    url = %canonical
+for rest.resource
+select
+{
+     RessourcenTyp: type,
+     Include: searchInclude,
+     ReverseInclude: searchRevInclude
+}
+</fql>
+
+### Operations
+
+<fql>
+from
+    CapabilityStatement
+where
+    url = %canonical
+for rest.resource
+select
+RessourcenTyp: type,
+join operation
+{
+     Name: name,
+     Spezifikation: definition,
+     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
+}
+</fql>
