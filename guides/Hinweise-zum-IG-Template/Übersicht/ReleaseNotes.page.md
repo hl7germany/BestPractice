@@ -1,12 +1,16 @@
 ## {{page-title}}
 
+### 24.09.2024
+* `added` Vervollständigung der Darstellung des CapabilityStatements
+* `changed` Selektion des CapabilityStatement.rest.resource-Knotens im Profil-Template anhand `suportedProfile` statt `type`, damit kann die Variable %resType entfallen
+
 ### 20.09.2024
 * `changed` Template und FQL-Queries für Rendering von CapabilityStatement vollständig überarbeitet
 
-### 13.9.2024
+### 13.09.2024
 * `fixed` FQL Queries auf CapabilityStatement funktionieren nun auch bei multiplen Ressourcentypen
 
-### 19.8.2024
+### 19.08.2024
 * `fixed` statische URL in FQL-Statement von ValueSet und CodeSystem auf Canonical-Variable korrigiert
 * `fixed` defekter PageLink im Template für CodeSystem korrigiert
 * `changed` neues Simplifier-Feature (ab Version 2024.5.2) output=transpose für Metadata-Tabellen verwendet.
