@@ -1,7 +1,6 @@
 ---
 canonical: http://example.org/StructureDefinition/MeinPatientProfil
 capability: http://example.org/CapabilityStatement/BeispielCapabilityStatement
-resType: Patient
 expand: 1
 ---
 
