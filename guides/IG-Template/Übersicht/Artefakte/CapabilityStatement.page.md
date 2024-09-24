@@ -6,7 +6,6 @@ canonical: http://example.org/CapabilityStatement/BeispielCapabilityStatement
 |-
 |![Information](https://wiki.hl7.de/images/thumb/Under_construction_icon-blue.svg/100px-Under_construction_icon-blue.svg.png)|Diese Seite ist ein Template, das bei Verwendung für ein konkretes Projekt angepasst werden muss! Dieses Banner kann verwendet werden, um zu kennzeichnen, welche Seiten noch nicht bearbeitet wurden, sich gerade in Arbeit befinden oder um auf offene Punkte hinzuweisen.|
 
-## {{link}}
 
 <fql output="transpose" headers="true">
 from
@@ -25,12 +24,22 @@ where
 select
 	Beschreibung:description
 </fql>
-{{link}}
 
+### Anforderungen an die FHIR-API
+<fql output="transpose" headers="true">
+from
+    CapabilityStatement
+where
+    url = %canonical
+select
+{
+     Modus: rest.mode,
+     Dokumentation: rest.documentation
+}
+order by type
+</fql>
 
-## Anforderungen an eine serverseitige Implementierungen
-
-### Interaktionen
+#### Interaktionen
 <fql>
 from
     CapabilityStatement
@@ -53,8 +62,7 @@ select
 order by type
 </fql>
 
-### Suchparameter
-
+#### Suchparameter
 <fql>
 from
     CapabilityStatement
@@ -73,7 +81,7 @@ join searchParam
 }
 </fql>
 
-### (Reverse-)Include
+#### (Reverse-)Include
 <fql>
 from
     CapabilityStatement
@@ -88,7 +96,7 @@ select
 }
 </fql>
 
-### Operations
+#### Operations 
 
 <fql>
 from
@@ -101,7 +109,19 @@ RessourcenTyp: type,
 join operation
 {
      Name: name,
+     Kontext: type,
      Spezifikation: definition,
      Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
 }
+</fql> 
+
+#### Dokumenten-Endpunkt
+<fql>
+from
+	CapabilityStatement
+where
+	url = %canonical
+for document
+select
+	Modus: mode, Profil: profile, Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
 </fql>
