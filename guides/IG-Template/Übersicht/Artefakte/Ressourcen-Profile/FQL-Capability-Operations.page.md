@@ -3,7 +3,7 @@ from
     CapabilityStatement
 where
     url = %capability
-for rest.resource.where(type = %resType).operation
+for rest.resource.where(supportedProfile = %canonical).operation
 select
 {
      Name: name,
