@@ -3,26 +3,11 @@ from
     CapabilityStatement
 where
     url = %capability
-for rest.resource.where(supportedProfile = %canonical).searchParam
+for rest.resource.where(supportedProfile = %canonical).interaction
 select
 {
-     Parameter: name,
+     Interaktion: code,
      Typ: type,
-     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
-     Hinweise: documentation
-}
-</fql>
-
-#### (Reverse-)Include
-<fql>
-from
-    CapabilityStatement
-where
-    url = %capability
-for rest.resource.where(supportedProfile = %canonical)
-select
-{
-     Include: searchInclude,
-     ReverseInclude: searchRevInclude
+     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
 }
 </fql>
