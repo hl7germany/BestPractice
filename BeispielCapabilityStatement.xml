@@ -18,7 +18,7 @@
                 <valueCode value="SHALL" />
             </extension>
             <type value="Patient" />
-            <supportedProfile value="https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKPatient" />
+            <supportedProfile value="http://example.org/StructureDefinition/MeinPatientProfil" />
             <interaction>
                 <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
                     <valueCode value="SHALL" />
