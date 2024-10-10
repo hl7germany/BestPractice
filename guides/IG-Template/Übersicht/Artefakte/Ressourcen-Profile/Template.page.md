@@ -73,8 +73,7 @@ from StructureDefinition where url = %canonical for differential.element.constra
         {{page:Übersicht/Artefakte/Ressourcen-Profile/FQL-Capability-Operations.page.md}}
     </tab>
     <tab title="Link">
-    <!-- Achtung: Link muss noch händisch gesetzt werden, hier funktioniert der Platzhalter %capability nicht!-->
-        {{link:http://example.org/CapabilityStatement/BeispielCapabilityStatement}}
+        {{pagelink:CapabilityStatement}}
     </tab>
 </tabs>
 
