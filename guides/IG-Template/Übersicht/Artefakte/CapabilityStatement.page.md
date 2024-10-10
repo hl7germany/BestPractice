@@ -1,4 +1,5 @@
 ---
+topic: CapabilityStatement
 canonical: http://example.org/CapabilityStatement/BeispielCapabilityStatement
 ---
 
