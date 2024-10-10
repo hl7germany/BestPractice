@@ -1,5 +1,7 @@
 ## {{page-title}}
 
+### 10.10.2024
+* `improved` topic-based pagelink statt hartcodierter URL um von Profil-Seite auf CapabilityStatement zu verweisen
 ### 24.09.2024
 * `added` Vervollständigung der Darstellung des CapabilityStatements
 * `changed` Selektion des CapabilityStatement.rest.resource-Knotens im Profil-Template anhand `suportedProfile` statt `type`, damit kann die Variable %resType entfallen
