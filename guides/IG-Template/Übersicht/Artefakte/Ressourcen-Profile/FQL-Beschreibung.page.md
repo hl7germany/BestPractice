@@ -1,3 +1,6 @@
+---
+topic: FQL-Beschreibung
+---
 <fql output="inline" headers="false">
         from
 	        StructureDefinition

@@ -1,5 +1,6 @@
 ## {{page-title}}
-
+### 17.10.2024
+* `fixed` FQL für Ressource-Interaktionen korrigiert, so dass es auch bei mehreren supportedProfiles korrekt funktioniert
 ### 10.10.2024
 * `improved` topic-based pagelink statt hartcodierter URL um von Profil-Seite auf CapabilityStatement zu verweisen
 ### 24.09.2024

@@ -1,9 +1,13 @@
+---
+topic: FQL-Capability-Operations
+---
+
 <fql>
 from
     CapabilityStatement
 where
     url = %capability
-for rest.resource.where(supportedProfile = %canonical).operation
+for rest.resource.where(%canonical in supportedProfile).operation
 select
 {
      Name: name,

@@ -31,7 +31,7 @@ select
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
   <tab title="Beschreibung"> 
-    {{page:Übersicht/Artefakte/Ressourcen-Profile/FQL-Beschreibung.page.md}}
+    {{page:FQL-Beschreibung}}
   </tab>
   <tab title="XML">{{xml}}</tab>
   <tab title="JSON">{{json}}</tab>
@@ -64,13 +64,13 @@ from StructureDefinition where url = %canonical for differential.element.constra
 
 <tabs>
     <tab title="Interaktionen"> 
-        {{page:Übersicht/Artefakte/Ressourcen-Profile/FQL-Capability-REST.page.md}}
+        {{page:FQL-Capability-REST}}
     </tab>
     <tab title="Suchparameter">
-        {{page:Übersicht/Artefakte/Ressourcen-Profile/FQL-Capability-Search.page.md}}
+        {{page:FQL-Capability-Search}}
     </tab>
     <tab title="Operationen">
-        {{page:Übersicht/Artefakte/Ressourcen-Profile/FQL-Capability-Operations.page.md}}
+        {{page:FQL-Capability-Operations}}
     </tab>
     <tab title="Link">
         {{pagelink:CapabilityStatement}}
