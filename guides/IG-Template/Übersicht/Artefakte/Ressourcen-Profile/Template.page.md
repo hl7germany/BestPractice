@@ -38,26 +38,29 @@ select
   <tab title="Link">{{link}}</tab>
 </tabs>
 
-<!-- TODO: FQL funktioniert noch nicht wie vorgesehen, da nur die Binding des Differentials ausgegeben werden
 ### Terminology-Bindings
-
 <fql headers="true">
 from 
     StructureDefinition
 where 
     url = %canonical
 for 
-    snapshot.element
+    differential.element
     where 
         mustSupport = true and binding.exists()
     select
-        Element: binding.path, Staerke: binding.strength, ValueSet: binding.valueSet
+        Element: id, Staerke: binding.strength, ValueSet: binding.valueSet
 </fql>
--->
 
 ### Constraints/Invarianten
 <fql headers="true">
-from StructureDefinition where url = %canonical for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
+from 
+    StructureDefinition 
+where 
+    url = %canonical 
+for 
+    differential.element.constraint 
+select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
 </fql>
 
 ### RestFul API
