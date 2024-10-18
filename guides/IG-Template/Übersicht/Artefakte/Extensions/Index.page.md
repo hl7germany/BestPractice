@@ -1,9 +1,16 @@
 ## {{page-title}}
 
-@```
+### In diesem Projekt verwendete Extensions
+
+<fql>
 from StructureDefinition
-	where type = 'Extension'
-	select Beschreibung: description, CanonicalURL: url, Kontext: context.expression, Status: status, Version: version
-```
+
+for differential.element
+
+where type.code = 'Extension'
+select Pfad:id, Extension: type.profile
+
+</fql>
+
 
 {{index:current}}

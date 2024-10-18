@@ -1,9 +1,13 @@
+---
+topic: FQL-Capability-Search
+---
+
 <fql>
 from
     CapabilityStatement
 where
     url = %capability
-for rest.resource.where(supportedProfile = %canonical).searchParam
+for rest.resource.where(%canonical in supportedProfile).searchParam
 select
 {
      Parameter: name,
@@ -19,7 +23,7 @@ from
     CapabilityStatement
 where
     url = %capability
-for rest.resource.where(supportedProfile = %canonical)
+for rest.resource.where(%canonical in supportedProfile)
 select
 {
      Include: searchInclude,
