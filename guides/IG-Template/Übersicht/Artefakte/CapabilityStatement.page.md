@@ -13,7 +13,7 @@ from
 where
 	url = %capability
 select
-	CanonicalURL: url, Intention: kind, Status: status, Version: version
+	CanonicalURL: url, Intention: kind, Status: status, Version: version, Autor: publisher, Datum: date
 </fql>
 
 <fql>
@@ -49,13 +49,13 @@ for rest.resource
 select
 {
      Ressourcentyp: type,
-     Profile: supportedProfile,
      Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
      READ: interaction.where(code = 'read').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
      SEARCH: interaction.where(code = 'search-type').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
      CREATE: interaction.where(code = 'create').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
      UPDATE: interaction.where(code = 'update').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
-     DELETE: interaction.where(code = 'delete').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
+     DELETE: interaction.where(code = 'delete').extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     Profile: supportedProfile
 
 
 }
@@ -75,9 +75,9 @@ join searchParam
 {
      SuchParameter: name,
      Type: token,
-     Definition: definition,
      Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
-     Hinweise: documentation
+     Dokumentation: documentation,
+     Definition: definition
 }
 </fql>
 
@@ -110,8 +110,10 @@ join operation
 {
      Name: name,
      Kontext: type,
-     Spezifikation: definition,
-     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
+     Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+     Dokumentation: documentation,
+     Spezifikation: definition
+     
 }
 </fql> 
 
@@ -123,5 +125,9 @@ where
 	url = %capability
 for document
 select
-	Modus: mode, Profil: profile, Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value
+	Modus: mode, 
+    Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value,
+    Dokumentation: documentation,
+    Profil: profile
+
 </fql>

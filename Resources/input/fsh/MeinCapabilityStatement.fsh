@@ -3,6 +3,7 @@ InstanceOf: CapabilityStatement
 Description: "Hier sollte eine Beschreibung stehen. für welche Akteure / welche Rollen dieses CapabilityStatement gilt"
 Usage: #definition
 * insert MetaInstance
+* description = "Hier sollte eine Beschreibung stehen. für welche Akteure / welche Rollen dieses CapabilityStatement gilt"
 * title = "CapabilityStatement Best PracticeBeispiel"
 * url = "http://fhir.de/test/CapabilityStatement/MeinCapabilityStatement"
 * kind = #requirements
@@ -11,6 +12,7 @@ Usage: #definition
 * format[+] = #application/fhir+json
 * rest
   * mode = #server
+  * documentation = "Hier können Hinweise für Server-Implementierungen stehen."
   * resource[+]
     * type = #Patient
     * insert Expectation (#SHALL)
