@@ -1,8 +1,14 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "MeinCapabilityStatement",
-  "title": "CapabilityStatement Best PracticeBeispiel",
   "url": "http://fhir.de/test/CapabilityStatement/MeinCapabilityStatement",
+  "description": "Hier sollte eine Beschreibung stehen. für welche Akteure / welche Rollen dieses CapabilityStatement gilt",
+  "version": "4.0.1",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "HL7 Deutschland e.V.",
+  "date": "2024-10-22",
+  "title": "CapabilityStatement Best PracticeBeispiel",
   "kind": "requirements",
   "fhirVersion": "4.0.1",
   "format": [
@@ -12,6 +18,7 @@
   "rest": [
     {
       "mode": "server",
+      "documentation": "Hier können Hinweise für Server-Implementierungen stehen.",
       "resource": [
         {
           "type": "Patient",
