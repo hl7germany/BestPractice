@@ -1,5 +1,5 @@
 ---
-canonical: http://example.org/StructureDefinition/MeineExtension
+canonical: http://fhir.de/test/StructureDefinition/MeineExtension
 expand: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-canonical: http://gefyra.de/fhir/sdc/Questionnaire/Demo
+canonical: http://fhir.de/test/Questionnaire/Demo
 expand: 2
 ---
 

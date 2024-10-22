@@ -1,0 +1,3 @@
+canonical: http://fhir.de/test
+fhirVersion: 4.0.1
+FSHOnly: true

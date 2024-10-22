@@ -1,0 +1,42 @@
+[
+  {
+    "outputFile": "CodeSystem-MeinCodeSystem.json",
+    "fshName": "MeinCodeSystem",
+    "fshType": "CodeSystem",
+    "fshFile": "MeinCodeSystem.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Questionnaire-QuestionnaireDemo.json",
+    "fshName": "QuestionnaireDemo",
+    "fshType": "Instance",
+    "fshFile": "MeinQuestionnaire.fsh",
+    "startLine": 3,
+    "endLine": 288
+  },
+  {
+    "outputFile": "StructureDefinition-MeinPatientProfil.json",
+    "fshName": "MeinPatientProfil",
+    "fshType": "Profile",
+    "fshFile": "MeinPatientProfil.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-MeineExtension.json",
+    "fshName": "MeineExtension",
+    "fshType": "Extension",
+    "fshFile": "MeineExtension.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "ValueSet-MeinValueSet.json",
+    "fshName": "MeinValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "MeinValueSet.fsh",
+    "startLine": 2,
+    "endLine": 6
+  }
+]

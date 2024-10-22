@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MeinValueSet",
+  "id": "MeinValueSet",
+  "description": "ValueSet für IG Template",
+  "url": "http://fhir.de/test/ValueSet/MeinValueSet",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/test/CodeSystem/MeinCodeSystem"
+      }
+    ]
+  }
+}

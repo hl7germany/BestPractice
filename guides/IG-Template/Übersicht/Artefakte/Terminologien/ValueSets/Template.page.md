@@ -1,5 +1,5 @@
 ---
-canonical: http://example.org/ValueSet/MeinValueSet
+canonical: http://fhir.de/test/ValueSet/MeinValueSet
 ---
 |Hinweis|Diese Box bitte entfernen!|
 |-

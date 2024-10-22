@@ -1,6 +1,6 @@
 ---
 topic: CapabilityStatement
-canonical: http://example.org/CapabilityStatement/BeispielCapabilityStatement
+canonical: http://fhir.de/test/CapabilityStatement/BeispielCapabilityStatement
 ---
 
 |Hinweis|Diese Box bitte entfernen!|

@@ -1,0 +1,32 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MeinCodeSystem",
+  "id": "MeinCodeSystem",
+  "description": "CodeSystem für IG Template",
+  "url": "http://fhir.de/test/CodeSystem/MeinCodeSystem",
+  "concept": [
+    {
+      "code": "1",
+      "display": "eins",
+      "definition": "so viel: |"
+    },
+    {
+      "code": "2",
+      "display": "zwei",
+      "definition": "so viel: | |"
+    },
+    {
+      "code": "3",
+      "display": "drei",
+      "definition": "so viel: | | |"
+    },
+    {
+      "code": "4",
+      "display": "vier",
+      "definition": "so viel: | | | |"
+    }
+  ],
+  "count": 4
+}

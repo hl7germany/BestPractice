@@ -1,5 +1,5 @@
 ---
-canonical: http://example.org/StructureDefinition/MeinPatientProfil
+canonical: http://fhir.de/test/StructureDefinition/MeinPatientProfil
 expand: 1
 ---
 
