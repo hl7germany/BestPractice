@@ -1,6 +1,11 @@
 {
   "resourceType": "Questionnaire",
   "id": "QuestionnaireDemo",
+  "version": "4.0.1",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "HL7 Deutschland e.V.",
+  "date": "2024-10-22",
   "extension": [
     {
       "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
@@ -39,7 +44,6 @@
       }
     }
   ],
-  "status": "draft",
   "title": "Questionnaire Feature Demo (LHC kompatibel)",
   "description": "Beispiel-Questionnaire zur Demonstration diverser SDC Funktionalitäten, z.B. Prepopulation, Extraction, Advanced Rendering",
   "url": "http://gefyra.de/fhir/sdc/Questionnaire/Demo",

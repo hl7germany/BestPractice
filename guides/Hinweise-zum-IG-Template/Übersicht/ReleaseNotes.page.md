@@ -1,6 +1,8 @@
 ## {{page-title}}
 ### 22.10.2024
 * `improved` Zuweisung von `%canonical` in globale Variablen `variables.yaml` verschoben
+* `improved` Beispiel-Ressourcen auf FSH migriert
+* `improved` ausführlicheres CapabilityStatement-Beispiel erzeugt
 ### 18.10.2024
 * `improved` Für Extensions würd jetzt eine übersicht der *verwendeten* Extensions (incl. aus Dependencies) erstellt, nicht nur der im Projekt spezifizierten
 * `improved` FQL Queries für Extensions verwenden `using scope` um auch Extensions aus Dependencies im IG darstellen zu können.

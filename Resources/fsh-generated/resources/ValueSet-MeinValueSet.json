@@ -1,10 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "MeinValueSet",
   "id": "MeinValueSet",
   "description": "ValueSet für IG Template",
+  "version": "4.0.1",
   "url": "http://fhir.de/test/ValueSet/MeinValueSet",
+  "experimental": true,
+  "publisher": "HL7 Deutschland e.V.",
+  "date": "2024-10-22",
   "compose": {
     "include": [
       {

@@ -2,5 +2,5 @@
 ValueSet: MeinValueSet
 Id: MeinValueSet
 Description: "ValueSet für IG Template"
-* ^status = #active
+* insert Meta
 * include codes from system MeinCodeSystem

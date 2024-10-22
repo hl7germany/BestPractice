@@ -1,6 +1,5 @@
 ---
 topic: CapabilityStatement
-canonical: http://fhir.de/test/CapabilityStatement/BeispielCapabilityStatement
 ---
 
 |Hinweis|Diese Box bitte entfernen!|
@@ -12,7 +11,7 @@ canonical: http://fhir.de/test/CapabilityStatement/BeispielCapabilityStatement
 from
 	CapabilityStatement
 where
-	url = %canonical
+	url = %capability
 select
 	CanonicalURL: url, Intention: kind, Status: status, Version: version
 </fql>
@@ -21,7 +20,7 @@ select
 from
 	CapabilityStatement
 where
-	url = %canonical
+	url = %capability
 select
 	Beschreibung:description
 </fql>
@@ -31,7 +30,7 @@ select
 from
     CapabilityStatement
 where
-    url = %canonical
+    url = %capability
 select
 {
      Modus: rest.mode,
@@ -45,7 +44,7 @@ order by type
 from
     CapabilityStatement
 where
-    url = %canonical
+    url = %capability
 for rest.resource
 select
 {
@@ -68,7 +67,7 @@ order by type
 from
     CapabilityStatement
 where
-    url = %canonical
+    url = %capability
 for rest.resource
 select
 RessourcenTyp: type,
@@ -87,7 +86,7 @@ join searchParam
 from
     CapabilityStatement
 where
-    url = %canonical
+    url = %capability
 for rest.resource
 select
 {
@@ -103,7 +102,7 @@ select
 from
     CapabilityStatement
 where
-    url = %canonical
+    url = %capability
 for rest.resource
 select
 RessourcenTyp: type,
@@ -121,7 +120,7 @@ join operation
 from
 	CapabilityStatement
 where
-	url = %canonical
+	url = %capability
 for document
 select
 	Modus: mode, Profil: profile, Verbindlichkeit: extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value

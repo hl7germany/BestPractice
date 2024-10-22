@@ -1,10 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "MeinCodeSystem",
   "id": "MeinCodeSystem",
   "description": "CodeSystem für IG Template",
+  "version": "4.0.1",
   "url": "http://fhir.de/test/CodeSystem/MeinCodeSystem",
   "concept": [
     {
@@ -28,5 +29,8 @@
       "definition": "so viel: | | | |"
     }
   ],
+  "experimental": true,
+  "publisher": "HL7 Deutschland e.V.",
+  "date": "2024-10-22",
   "count": 4
 }

@@ -2,9 +2,13 @@
   "resourceType": "StructureDefinition",
   "id": "MeinPatientProfil",
   "url": "http://fhir.de/test/StructureDefinition/MeinPatientProfil",
+  "version": "4.0.1",
   "name": "MeinPatientProfil",
   "title": "Mein Patienten-Profil",
   "status": "draft",
+  "experimental": true,
+  "date": "2024-10-22",
+  "publisher": "HL7 Deutschland e.V.",
   "description": "Beispielprofil für IG Template. Mit noch mehr Text zu Testzwecken: Hier ist ein [link](http://gefyra.de), und eine \n  # Überschrift \n  sowie \n  * eine \n  * Aufzählung ",
   "fhirVersion": "4.0.1",
   "mapping": [

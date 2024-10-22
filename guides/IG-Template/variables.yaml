@@ -1,2 +1,2 @@
 greeting: Hello World!
-capability: http://example.org/CapabilityStatement/BeispielCapabilityStatement
+capability: http://fhir.de/test/CapabilityStatement/MeinCapabilityStatement

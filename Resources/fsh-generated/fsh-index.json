@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "CapabilityStatement-MeinCapabilityStatement.json",
+    "fshName": "MeinCapabilityStatement",
+    "fshType": "Instance",
+    "fshFile": "MeinCapabilityStatement.fsh",
+    "startLine": 1,
+    "endLine": 160
+  },
+  {
     "outputFile": "CodeSystem-MeinCodeSystem.json",
     "fshName": "MeinCodeSystem",
     "fshType": "CodeSystem",
@@ -13,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "MeinQuestionnaire.fsh",
     "startLine": 3,
-    "endLine": 288
+    "endLine": 289
   },
   {
     "outputFile": "StructureDefinition-MeinPatientProfil.json",
@@ -21,7 +29,7 @@
     "fshType": "Profile",
     "fshFile": "MeinPatientProfil.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 23
   },
   {
     "outputFile": "StructureDefinition-MeineExtension.json",
@@ -29,7 +37,7 @@
     "fshType": "Extension",
     "fshFile": "MeineExtension.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   },
   {
     "outputFile": "ValueSet-MeinValueSet.json",

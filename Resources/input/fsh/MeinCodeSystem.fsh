@@ -1,7 +1,7 @@
 CodeSystem: MeinCodeSystem
 Id: MeinCodeSystem
 Description: "CodeSystem für IG Template"
-* ^status = #active
+* insert Meta
 * ^content = #complete
 * ^count = 4
 * #1 "eins" "so viel: |"
