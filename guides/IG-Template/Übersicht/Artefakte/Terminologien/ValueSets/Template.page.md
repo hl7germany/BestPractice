@@ -14,7 +14,7 @@ canonical: http://fhir.de/test/ValueSet/MeinValueSet
 from
 	ValueSet
 where
-	url = 'http://example.org/ValueSet/MeinValueSet'
+	url = %canonical
 select
 	CanonicalURL: url, Status: status, Version: version
 </fql>
