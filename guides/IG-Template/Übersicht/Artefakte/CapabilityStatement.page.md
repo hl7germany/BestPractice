@@ -91,9 +91,12 @@ for rest.resource
 select
 {
      RessourcenTyp: type,
-     Include: searchInclude,
-     ReverseInclude: searchRevInclude
+     'Include (SHALL)': searchInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value='SHALL'),
+    'Include (MAY)': searchInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value='MAY'),
+     'Reverse Include (SHALL)': searchRevInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value='SHALL'),
+    'Reverse Include (MAY)': searchRevInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value='MAY')
 }
+
 </fql>
 
 #### Operations 
