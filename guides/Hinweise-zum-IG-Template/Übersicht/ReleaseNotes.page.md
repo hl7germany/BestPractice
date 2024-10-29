@@ -1,4 +1,7 @@
 ## {{page-title}}
+### 29.10.2024
+* `improved` im Rendering des CapabilityStatements wird nun in der Darstellung von (Rev)Include-Parametern zwischen MAY und SHALL differenziert
+
 ### 22.10.2024
 * `improved` Zuweisung von `%canonical` in globale Variablen `variables.yaml` verschoben
 * `improved` Beispiel-Ressourcen auf FSH migriert
