@@ -4,10 +4,10 @@
   filename: Konzeption-und-Durchführung-von-Spezifikations-Projekten.page.md
 - name: Profilierung
   filename: Profilierung
+- name: Benennung und Versionierung von Artefakten
+  filename: Benennung-und-Versionierung-von-Artefakten
 - name: Auswahl eines geeigneten Austausch-Paradigmas
   filename: Auswahl-eines-geeigneten-Austausch-Paradigmas
-- name: Benennung und Versionierung von Artefakten
-  filename: Benennung-und-Versionierung-von-Artefakten.page.md
 - name: Verwendung von Extensions
   filename: Verwendung-von-Extensions.page.md
 - name: Erstellung eines CapabilityStatements
