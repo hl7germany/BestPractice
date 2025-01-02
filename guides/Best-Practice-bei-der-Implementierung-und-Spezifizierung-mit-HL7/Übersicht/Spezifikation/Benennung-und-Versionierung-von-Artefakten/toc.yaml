@@ -1,0 +1,10 @@
+- name: Index
+  filename: Index.page.md
+- name: Benennung definitorischer Artefakte
+  filename: Benennung-definitorischer-Artefakte.page.md
+- name: Benennung von Packages
+  filename: Benennung-von-Packages.page.md
+- name: 'Bedeutung und Nutzung von Canoncial URLs '
+  filename: Bedeutung-und-Nutzung-von-Canoncial-URLs.page.md
+- name: 'Regeln und Best Practice für die Festlegung von Canonicals '
+  filename: Regeln-und-Best-Practice-für-die-Festlegung-von-Canonicals.page.md
