@@ -39,7 +39,11 @@ Wird eine Domäne aufgegeben, weil eine entsprechende Organisation nicht mehr ex
 
 Bei der Referenzierung auf eine Definition mittels des Datentyps `canonical` kann die Version pipe-separiert mit angegeben werden, wenn sichergestellt werden soll, dass sich der Verweis immer auf dieselbe Version einer Definition bezieht, unabhängig davon, ob diese noch aktuell oder gültig ist. 
 
+In der Fhir-Spezifikation ist keine festgelegte Vorgabe zum Aufbau der Version enthalten. Die International oft genutzte SemVer-Versionierungsspezifikation ist eine gute Option und es wird empfohlen diese im Rahmen der erstellten Spezifikation festzulegen.
+
 Beispiel: `http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1`
+
+Bei Nutzung von SemVer ist es möglich die letzte Stelle (Bugfix-Stelle) der Canoncial als Wildcard wegzulassen z.B. http://hl7.org/fhir/ValueSet/data-absent-reason|4.0. Dies ermöglicht es Bugfixupdates ohne Anpassungnotwendigkeit der Teilnehmer, die bereits alles korrekt umgesetzt hatten, durchzuführen. In R4 ist dies in der Spezifikation noch nicht eindeutig erläutert, allerdings in den Folgeversionen bereits intendiert ([NPM Packages](https://confluence.hl7.org/pages/viewpage.action?pageId=35718629#NPMPackageSpecification-Versionreferences), [R5 Packages](https://hl7.org/fhir/packages.html#:~:text=Any%20dependencies%20SHALL,found%20patch%20number%3A), [R6 Build Canoncial Matching](https://build.fhir.org/references.html#canonical-matching))
 
 Bei einer Canonical-Referenz *ohne* Versionsangabe entscheidet das jeweils interpretierende System, welche Version gilt. 
 
