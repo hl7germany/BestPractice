@@ -16,7 +16,7 @@ Bei der Verwendung von MustSupport-Flags in der Profilierung sind folgende Aspek
 * abgeleitete Profile können MustSupport-Flags nicht mehr entfernen, lediglich weitere Elemente kennzeichnen. Dies muss bei der Spezifikation bedacht werden, wenn es absehbar ist, dass abgeleitete Profile benötigt werden.
 * MustSupport Flags sollten auf allenen Ebenen der Baumstruktur konsistent verwendet werden. Das bedeutet dass
   * ein Kind Element nur gekennzeichnet werden sollte, wenn auch das Parent-Element ein MustSupport-Flag hat.
-  * ein Parent-Element nur gegekennzeichnet werden sollte, wenn auch konkret spezifiziert werden kann, welche Kind-Elemente MustSupport sind.
+  * ein Parent-Element nur gekennzeichnet werden sollte, wenn mindesten ein Kind-Element als MustSupport gekennzeichnet wird und konkret spezifiziert werden kann, welche Kind-Elemente MustSupport sind.  
 * der Grund, weshalb ein Element als MustSupport gekennzeichnet wurde, sollte möglichst in `ElementDefinition.comment` dargelegt werden.
 
 **Wichtiger Hinweis:**
