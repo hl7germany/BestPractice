@@ -4,6 +4,6 @@ Ein finale Version eines Implementierungsleitfadens soll als statisches, version
 
 Alle im Leitfaden enthaltenen technischen Artefakte (Profile, ValueSets, CodeSysteme etc.) sind in einem FHIR-Package zusammenzufassen. Dieses Package ist zu versionieren und in der offiziellen FHIR Package Registry zu publizieren, damit es von Implementierungen automatisiert gefunden und eingebunden werden kann.
 
-Für die Versionierung wird die Verwendung von Semantic Versioning (SemVar) empfohlen. Damit können Änderungen klar nachvollzogen werden.
+Für die Versionierung wird die Verwendung von Semantic Versioning (SemVer) empfohlen. Damit können Änderungen klar nachvollzogen werden.
 
 Darüber hinaus ist es erforderlich, alle Änderungen in einem ChangeLog transparent festzuhalten. Dies erleichtert die Nachvollziehbarkeit und unterstützt Anwender bei der Bewertung von Updates und Migrationen.
