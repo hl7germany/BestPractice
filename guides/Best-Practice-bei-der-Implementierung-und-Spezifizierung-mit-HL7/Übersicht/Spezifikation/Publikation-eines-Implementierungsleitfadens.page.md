@@ -6,4 +6,4 @@ Alle im Leitfaden enthaltenen technischen Artefakte (Profile, ValueSets, CodeSys
 
 Für die Versionierung wird die Verwendung von Semantic Versioning (SemVer) empfohlen. Damit können Änderungen klar nachvollzogen werden.
 
-Darüber hinaus ist es erforderlich, alle Änderungen in einem ChangeLog transparent festzuhalten. Dies erleichtert die Nachvollziehbarkeit und unterstützt Anwender bei der Bewertung von Updates und Migrationen.
+Darüber hinaus ist es erforderlich, alle Änderungen in ReleaseNotes transparent festzuhalten. Dies erleichtert die Nachvollziehbarkeit und unterstützt Anwender bei der Bewertung von Updates und Migrationen.
