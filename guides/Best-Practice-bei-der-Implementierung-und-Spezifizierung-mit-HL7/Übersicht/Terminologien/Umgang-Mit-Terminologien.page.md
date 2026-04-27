@@ -6,10 +6,10 @@ Bei der Verwendung von Terminologien in FHIR stellt die Kombination aus Coding.s
 
 In verteilten, lose gekoppelten Systemlandschaften – wie sie im Gesundheitswesen üblich sind – ist diese implizite Annahme nicht tragfähig. Unterschiedliche Systeme arbeiten häufig mit unterschiedlichen Terminologiereleases, verfügen nicht immer über Zugriff auf zentrale Terminologieserver oder müssen Terminologien lokal und zeitversetzt aktualisieren. Darüber hinaus müssen medizinische Daten über lange Zeiträume hinweg konsistent interpretierbar bleiben, auch wenn sich die zugrunde liegenden Terminologien weiterentwickeln.
 
-Vor diesem Hintergrund wird empfohlen, die Versionsinformation (Coding.version) konsequent und verpflichtend zu verwenden und die Kardinalität auf 1..1 festzulegen. Nur durch die explizite Angabe der verwendeten Terminologieversion wird sichergestellt, dass die semantische Bedeutung eines Codes eindeutig und reproduzierbar ist – unabhängig von Zeitpunkt, Systemumgebung oder Infrastrukturzustand.Die Verwendung von Coding.version ermöglicht insbesondere:
+Vor diesem Hintergrund wird empfohlen, die Versionsinformation (Coding.version) konsequent und verpflichtend zu verwenden und die Kardinalität auf 1..1 festzulegen. Nur durch die explizite Angabe der verwendeten Terminologieversion wird sichergestellt, dass die semantische Bedeutung eines Codes eindeutig und reproduzierbar ist – unabhängig von Zeitpunkt, Systemumgebung oder Infrastrukturzustand. Die Verwendung von Coding.version ermöglicht insbesondere:
 
 * die eindeutige Referenzierung eines konkreten Terminologiestands,
-* die reproduzierbare Validierung von Instanzen über Zeit hinweg,
+* die reproduzierbare Validierung von Instanzen über die Zeit hinweg,
 * die konsistente Interpretation historischer Datenbestände,
 * die transparente Analyse von Abweichungen zwischen unterschiedlichen Systemständen,
 * sowie die gezielte Durchführung von Migrationen oder Mappings zwischen Terminologieversionen.
