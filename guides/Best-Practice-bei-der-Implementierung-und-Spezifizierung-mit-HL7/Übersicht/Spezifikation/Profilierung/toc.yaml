@@ -2,6 +2,8 @@
   filename: Index.page.md
 - name: Umgang mit Kardinalitäten
   filename: Umgang-mit-Kardinalitäten.page.md
+- name: Umgang mit MustSupport-Flags
+  filename: Umgang-mit-Must-Support-Flags.page.md  
 - name: Umgang mit Modifying Elements
   filename: Umgang-mit-Modifying-Elements.page.md
 - name: Umgang mit Meta-Daten
