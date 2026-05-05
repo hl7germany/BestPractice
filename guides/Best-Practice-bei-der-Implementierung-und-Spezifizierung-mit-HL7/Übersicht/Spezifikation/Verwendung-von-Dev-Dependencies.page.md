@@ -1,4 +1,4 @@
-{{page}}
+{{page-title}}
 
 Bei DevDependencies handelt es sich um ein Feature aus der npm-Kernspezifikation: [Specifying dependencies and devDependencies in a package.json file | npm Docs](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file/).
 
