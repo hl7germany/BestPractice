@@ -10,6 +10,8 @@
   filename: Auswahl-eines-geeigneten-Austausch-Paradigmas
 - name: Verwendung von Extensions
   filename: Verwendung-von-Extensions.page.md
+- name: Verwendung von DevDependencies
+  filename: Verwendung-von-Dev-Dependencies.page.md
 - name: Erstellung eines CapabilityStatements
   filename: Erstellung-eines-CapabilityStatements.page.md
 - name: Erstellung von Beispieldaten
