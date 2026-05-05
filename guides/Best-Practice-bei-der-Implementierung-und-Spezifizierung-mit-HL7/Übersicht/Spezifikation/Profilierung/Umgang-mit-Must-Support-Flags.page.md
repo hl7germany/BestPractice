@@ -19,6 +19,12 @@ Bei der Verwendung von MustSupport-Flags in der Profilierung sind folgende Aspek
   * ein Parent-Element nur gekennzeichnet werden sollte, wenn mindesten ein Kind-Element als MustSupport gekennzeichnet wird und konkret spezifiziert werden kann, welche Kind-Elemente MustSupport sind.  
 * der Grund, weshalb ein Element als MustSupport gekennzeichnet wurde, sollte möglichst in `ElementDefinition.comment` dargelegt werden.
 
+#### Obligations
+Wenn die Anforderungen an die relevanten Elemente in Implementierungen verschiedener Rollen (z.B. Sender und Empfänger) voneinander abweichen, bzw. abgeleiteten Profilen mehr Freiheiten gelassen werden sollen, Anforderungen für weitere Rollen hinzuzufügen, dann empfiehlt sich anstelle von (oder ergänzend zu) MustSupport-Flags die [Obligations-Extension](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-obligation.html) zu verwenden.
+
 **Wichtiger Hinweis:**
-Die korrekte Implementierung von MustSupport Flags kann nicht durch Validierung überprüft werden. 
+Die korrekte Implementierung von MustSupport-Flags bzw. Obligations kann nicht durch Validierung überprüft werden. 
 Für Konformitätstests sind daher darüber hinaus gehende Verfahren erforderlich, abhängig von der Semantik der MustSupport-Flags.
+
+
+
