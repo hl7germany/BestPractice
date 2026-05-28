@@ -1,7 +1,7 @@
 {{page-title}}
 
 MustSupport-Flags dienen dazu, Implementierern die für einen konkreten UseCase relevanten Elemente aufzuzeigen.
-Die Kennzeichnung relevanter Elemente mittels MustSupport im Sinne einer Positiv-Liste ist aus Interoperabilitätsgründen gegenüber dem Verbot von Elementen mittels Kardinalitäts-Begrenzung im Sinne einer einer Negativ-Liste vorzuziehen!
+Die Kennzeichnung relevanter Elemente mittels MustSupport im Sinne einer Positiv-Liste ist aus Interoperabilitätsgründen gegenüber dem Verbot von Elementen mittels Kardinalitäts-Begrenzung im Sinne einer Negativ-Liste vorzuziehen!
 
 Die Semantik von MustSupport ist im FHIR-Standard nicht erschöpfend definiert und kann an die Bedürfnisse einzelner Anwendungsfälle angepasst werden.
 Spezifikationen, die MustSupport-Flags verwenden, sind daher angehalten, die Erwartungen an die Impementierer im Leitfaden zu präzisieren.
