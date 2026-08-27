@@ -1,7 +1,5 @@
 ## Best Practice {{page-title}}
 
-### ...für die Verwendung von Terminologien in Spezifikationen
-
 ### Empfehlung Coding.version 1..1
 
 Bei der Verwendung von Terminologien in FHIR stellt die Kombination aus Coding.system und Coding.code allein keine hinreichend stabile Referenz auf die semantische Bedeutung eines Codes dar. In realen Terminologiesystemen existieren typischerweise mehrere Versionen unter derselben canonical URL, wobei sich Inhalte, Hierarchien, Designations oder die Gültigkeit einzelner Konzepte zwischen den Releases verändern können. Ohne eine explizite Versionsangabe hängt die Interpretation eines Codes somit implizit vom Terminologiestand des verarbeitenden Systems ab.
